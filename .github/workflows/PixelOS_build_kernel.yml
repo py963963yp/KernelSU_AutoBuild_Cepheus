@@ -31,9 +31,9 @@ jobs:
           sed -i "s/KERNEL_NAME=.*/KERNEL_NAME=${KERNEL_NAME}-"$(date "+%Y%m%d%H%M%S")"/g" build.sh
           
           
-      - name: add kernelsu 
-        run: |
-          cd $GITHUB_WORKSPACE/kernel_workspace/android-kernel
+#      - name: add kernelsu 
+#        run: |
+#          cd $GITHUB_WORKSPACE/kernel_workspace/android-kernel
 #          echo "CONFIG_KPROBES=y" >> arch/arm64/configs/${{ env.KERNEL_DEFCONFIG }}
 #          echo "CONFIG_HAVE_KPROBES=y" >> arch/arm64/configs/${{ env.KERNEL_DEFCONFIG }}
 #          echo "CONFIG_KPROBE_EVENTS=y" >> arch/arm64/configs/${{ env.KERNEL_DEFCONFIG }}
@@ -41,7 +41,7 @@ jobs:
 #          echo "CONFIG_KSU=y" >> arch/arm64/configs/${{ env.KERNEL_DEFCONFIG }}
 #          echo "CONFIG_KSU_DEBUG=y" >> arch/arm64/configs/${{ env.KERNEL_DEFCONFIG }}
     
-          curl -LSs "https://raw.githubusercontent.com/ReSukiSU/ReSukiSU/main/kernel/setup.sh" | bash
+#          curl -LSs "https://raw.githubusercontent.com/ReSukiSU/ReSukiSU/main/kernel/setup.sh" | bash
 #          sed -i "s/type_val_to_struct/type_val_to_struct_array/g" KernelSU/kernel/selinux/sepolicy.c
           
       - name: build kernel
