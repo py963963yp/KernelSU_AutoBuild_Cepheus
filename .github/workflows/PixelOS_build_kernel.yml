@@ -42,7 +42,7 @@ jobs:
 #          echo "CONFIG_KSU_DEBUG=y" >> arch/arm64/configs/${{ env.KERNEL_DEFCONFIG }}
     
           curl -LSs "https://raw.githubusercontent.com/ReSukiSU/ReSukiSU/main/kernel/setup.sh" | bash
-          sed -i 's/type_val_to_struct/type_val_to_struct_array/g' KernelSU/kernel/selinux/sepolicy.c
+          sed -i "s/type_val_to_struct/type_val_to_struct_array/g" KernelSU/kernel/selinux/sepolicy.c
           
       - name: build kernel
         run: |
