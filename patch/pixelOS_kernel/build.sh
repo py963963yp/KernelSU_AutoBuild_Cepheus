@@ -28,6 +28,10 @@ rm -rf $KERNEL_PATH/out/ *.zip
 # make mrproper && git reset --hard HEAD
 make mrproper
 
+curl -LSs "https://raw.githubusercontent.com/ReSukiSU/ReSukiSU/main/kernel/setup.sh" | bash
+
+sed -i 's/type_val_to_struct/type_val_to_struct_array/g' KernelSU/kernel/selinux/sepolicy.c
+
 echo "=========================Build========================="
 make O=out cepheus_defconfig
 make O=out | tee out/kernel.log
