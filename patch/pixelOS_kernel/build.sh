@@ -34,7 +34,7 @@ make mrproper
 
 #sed -i 's/type_val_to_struct/type_val_to_struct_array/g' KernelSU/kernel/selinux/sepolicy.c
 
-curl -LSs "https://raw.githubusercontent.com/SukiSU-Ultra/SukiSU-Ultra/main/kernel/setup.sh" | bash -s main
+
 
 echo "=========================Build========================="
 make O=out cepheus_defconfig
