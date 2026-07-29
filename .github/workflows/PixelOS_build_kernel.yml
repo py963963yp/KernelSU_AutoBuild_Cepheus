@@ -60,3 +60,4 @@ jobs:
           files: |
             kernel_workspace/android-kernel/out/*.zip
             kernel_workspace/android-kernel/out/vmlinux
+            kernel_workspace/android-kernel/kernel.tar.gz
