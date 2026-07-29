@@ -40,6 +40,8 @@ echo "=========================Build========================="
 make O=out cepheus_defconfig
 make O=out | tee out/kernel.log
 
+tar -czvf kernel.tar.gz out/drivers/kernelsu
+
 if [ ! -e $KERNEL_PATH/out/arch/arm64/boot/Image.gz-dtb ]; then
     echo "=======================FAILED!!!======================="
     rm -rf $ANYKERNEL_PATH
