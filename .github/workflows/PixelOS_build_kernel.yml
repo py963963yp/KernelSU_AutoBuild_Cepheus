@@ -29,10 +29,10 @@ jobs:
           cd $GITHUB_WORKSPACE/kernel_workspace/android-kernel
           cp $GITHUB_WORKSPACE/patch/pixelOS_kernel/anykernel.sh $GITHUB_WORKSPACE/patch/pixelOS_kernel/build.sh $GITHUB_WORKSPACE/kernel_workspace/android-kernel
           
-      - name: add resukisu 
-        run: |
-          curl -LSs "https://raw.githubusercontent.com/py963963yp/ReSukiSU/main/kernel/setup.sh" | bash
-          sed -i 's/type_val_to_struct/type_val_to_struct_array/g' KernelSU/kernel/selinux/sepolicy.c  
+#      - name: add resukisu 
+#        run: |
+#          curl -LSs "https://raw.githubusercontent.com/py963963yp/ReSukiSU/main/kernel/setup.sh" | bash
+#          sed -i 's/type_val_to_struct/type_val_to_struct_array/g' KernelSU/kernel/selinux/sepolicy.c  
 #      - name: add kernelsu 
 #        run: |
 #          cd $GITHUB_WORKSPACE/kernel_workspace/android-kernel
