@@ -1,7 +1,7 @@
 name: PixelOS_build_kernel
 env:
-  KERNEL_SOURCE: 'https://github.com/py963963yp/sukisu'
-  KERNEL_SOURCE_BRANCH: 'master'
+  KERNEL_SOURCE: 'https://github.com/py963963yp/kernel'
+  KERNEL_SOURCE_BRANCH: 'main'
   KERNEL_DEFCONFIG: 'cepheus_defconfig'
   KERNEL_NAME: 'pixelos-cepheus-15'
   
@@ -28,7 +28,6 @@ jobs:
           
           cd $GITHUB_WORKSPACE/kernel_workspace/android-kernel
           cp $GITHUB_WORKSPACE/patch/pixelOS_kernel/anykernel.sh $GITHUB_WORKSPACE/patch/pixelOS_kernel/build.sh $GITHUB_WORKSPACE/kernel_workspace/android-kernel
-          sed -i "s/KERNEL_NAME=.*/KERNEL_NAME=${KERNEL_NAME}-"$(date "+%Y%m%d%H%M%S")"/g" build.sh
           
           
 #      - name: add kernelsu 
