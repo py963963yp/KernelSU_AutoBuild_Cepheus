@@ -1,7 +1,7 @@
 name: PixelOS_build_kernel
 env:
-  KERNEL_SOURCE: 'https://github.com/py963963yp/kernel'
-  KERNEL_SOURCE_BRANCH: 'master'
+  KERNEL_SOURCE: 'https://github.com/balgxmr/kernel_xiaomi_cepheus'
+  KERNEL_SOURCE_BRANCH: 'fifteen'
   KERNEL_DEFCONFIG: 'cepheus_defconfig'
   KERNEL_NAME: 'pixelos-cepheus-15'
   
