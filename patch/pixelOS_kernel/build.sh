@@ -30,9 +30,9 @@ make mrproper
 
 #curl -LSs "https://raw.githubusercontent.com/py963963yp/SukiSU-Ultra/main/kernel/setup.sh" | bash -s builtin
 
-#curl -LSs "https://raw.githubusercontent.com/py963963yp/ReSukiSU/main/kernel/setup.sh" | bash
+curl -LSs "https://raw.githubusercontent.com/py963963yp/ReSukiSU/main/kernel/setup.sh" | bash
 
-#sed -i 's/type_val_to_struct/type_val_to_struct_array/g' KernelSU/kernel/selinux/sepolicy.c
+sed -i 's/type_val_to_struct/type_val_to_struct_array/g' KernelSU/kernel/selinux/sepolicy.c
 
 
 
