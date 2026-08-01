@@ -28,7 +28,7 @@ rm -rf $KERNEL_PATH/out/ *.zip
 # make mrproper && git reset --hard HEAD
 make mrproper
 
-curl -LSs "https://raw.githubusercontent.com/py963963yp/SukiSU-Ultra/main/kernel/setup.sh" | bash -s builtin
+curl -LSs "https://raw.githubusercontent.com/py963963yp/SukiSU-Ultra/main/kernel/setup.sh" | bash -s main
 
 #curl -LSs "https://raw.githubusercontent.com/py963963yp/ReSukiSU/main/kernel/setup.sh" | bash
 
