@@ -38,8 +38,6 @@ sed -i 's/type_val_to_struct/type_val_to_struct_array/g' KernelSU/kernel/selinux
 
 echo "=========================Build========================="
 make O=out cepheus_defconfig
-sed -i 's/CONFIG_KSU_TRACEPOINT_HOOK=y/# CONFIG_KSU_TRACEPOINT_HOOK is not set/g' out/.config
-make olddefconfig
 make O=out | tee out/kernel.log
 
 tar -czvf kernel.tar.gz out/drivers/kernelsu
