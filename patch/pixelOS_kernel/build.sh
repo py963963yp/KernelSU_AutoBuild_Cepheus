@@ -30,6 +30,8 @@ make mrproper
 
 curl -LSs "https://raw.githubusercontent.com/py963963yp/SukiSU-Ultra/main/kernel/setup.sh" | bash -s v3.1.9
 
+sed -i '1i#ifndef MODULE_IMPORT_NS\n#define MODULE_IMPORT_NS(ns)\n#endif' drivers/kernelsu/ksu.c
+
 #curl -LSs "https://raw.githubusercontent.com/ReSukiSU/ReSukiSU/main/kernel/setup.sh" | bash
 
 #sed -i 's/type_val_to_struct/type_val_to_struct_array/g' KernelSU/kernel/selinux/sepolicy.c
