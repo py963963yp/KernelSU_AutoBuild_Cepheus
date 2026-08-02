@@ -32,6 +32,8 @@ curl -LSs "https://raw.githubusercontent.com/py963963yp/su/main/kernel/setup.sh"
 
 sed -i '1i#ifndef MODULE_IMPORT_NS\n#define MODULE_IMPORT_NS(ns)\n#endif' drivers/kernelsu/ksu.c
 
+sed -i '1i#define KSU_COMPAT_HAS_CURRENT_SID' drivers/kernelsu/selinux/selinux.c
+
 #curl -LSs "https://raw.githubusercontent.com/ReSukiSU/ReSukiSU/main/kernel/setup.sh" | bash
 
 #sed -i 's/type_val_to_struct/type_val_to_struct_array/g' KernelSU/kernel/selinux/sepolicy.c
