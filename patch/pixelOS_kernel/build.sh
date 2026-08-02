@@ -42,7 +42,7 @@ sed -i '1i#define KSU_COMPAT_HAS_CURRENT_SID' drivers/kernelsu/selinux/selinux.c
 
 echo "=========================Build========================="
 make O=out cepheus_resukisu_defconfig
-make O=out | tee out/kernel.log
+make O=out CONFIG_DEBUG_SECTION_MISMATCH=y | tee out/kernel.log
 
 tar -czvf kernel.tar.gz out/drivers/kernelsu
 
