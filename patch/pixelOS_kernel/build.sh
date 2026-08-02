@@ -28,7 +28,7 @@ rm -rf $KERNEL_PATH/out/ *.zip
 # make mrproper && git reset --hard HEAD
 make mrproper
 
-curl -LSs "https://raw.githubusercontent.com/py963963yp/SukiSU-Ultra/main/kernel/setup.sh" | bash -s v3.1.9
+curl -LSs "https://raw.githubusercontent.com/py963963yp/SukiSU-Ultra/main/kernel/setup.sh" | bash -s main
 
 sed -i '1i#ifndef MODULE_IMPORT_NS\n#define MODULE_IMPORT_NS(ns)\n#endif' drivers/kernelsu/ksu.c
 
