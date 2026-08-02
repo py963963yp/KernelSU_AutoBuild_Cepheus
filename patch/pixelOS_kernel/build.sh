@@ -37,7 +37,6 @@ curl -LSs "https://raw.githubusercontent.com/py963963yp/SukiSU-Ultra/main/kernel
 
 
 echo "=========================Build========================="
-make O=out cepheus_defconfig
 make O=out | tee out/kernel.log
 
 tar -czvf kernel.tar.gz out/drivers/kernelsu
