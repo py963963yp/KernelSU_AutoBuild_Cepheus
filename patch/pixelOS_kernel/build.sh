@@ -41,7 +41,7 @@ sed -i 's/type_val_to_struct/type_val_to_struct_array/g' KernelSU/kernel/selinux
 
 
 echo "=========================Build========================="
-make O=out kpm_defconfig
+make O=out droidspaces_defconfig
 make O=out CONFIG_DEBUG_SECTION_MISMATCH=y | tee out/kernel.log
 
 tar -czvf kernel.tar.gz out/drivers/kernelsu
